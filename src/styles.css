@@ -1,0 +1,28 @@
+h2 {
+  font-size: 52px;
+}
+ul.date {
+  list-style: none;
+  padding-left: 0;
+}
+ul.date li {
+  display: inline-block;
+}
+ul.details {
+  list-style: none;
+}
+ul.details li {
+  font-size: smaller;
+}
+
+.metcast-app {
+  margin: 20px auto;
+  padding: 30px 10px;
+}
+.detailsFont {
+  font-size: 12px;
+}
+.day,
+.nightTemp {
+  font-size: smaller;
+}
