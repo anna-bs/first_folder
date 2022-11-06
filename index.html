@@ -26,6 +26,7 @@
                 placeholder="Search a city"
                 id="find-city"
                 autofocus
+                autocomplete="off"
               />
             </div>
           </div>
@@ -45,9 +46,15 @@
                 </small>
               </ul>
             </div>
-            <h2 class="mb-0" id="temperature">23</h2>
-            <span class="units text-muted">
-              <a href="#" id="celsius">°C</a> |
+            <h2 class="mb-0">
+              <div class="d-flex justify-content-start weather-temperature">
+                <img src="" alt="weather" id="icon" />
+
+                <span id="temperature">23</span>°
+              </div>
+            </h2>
+            <span class="d-flex justify-content-start units text-muted">
+              <a href="#" id="celsius" class="active">°C</a> |
               <a href="#" id="fahrenheit">°F</a>
             </span>
           </div>
@@ -55,10 +62,12 @@
         <div class="row justify-content-start">
           <div class="col-4">
             <ul class="details">
-              <li>Feels like: <span class="feelsLike">20</span>°C</li>
-              <li>Humidity: <span class="humidity">40</span>%</li>
-              <li>Wind: <span class="wind">13</span>km/h</li>
-              <li>Precipitation: <span class="precipitation">10</span>%</li>
+              <li>
+                Feels like: <span id="feels-like" class="feelsLike">20</span>°C
+              </li>
+              <li>Humidity: <span id="humidity" class="humidity">40</span>%</li>
+              <li>Wind: <span id="wind-speed" class="wind">13</span>km/h</li>
+              <!-- ADD LATER: <li>Precipitation: <span class="precipitation">10</span>%</li> -->
             </ul>
           </div>
         </div>
