@@ -38,6 +38,7 @@ ul.details li {
   text-decoration: none;
 }
 
-/* .units .active:hover {
-  text-decoration: none;
-} */
+.weather-forecast {
+  margin-top: 30px;
+  text-align: center;
+}
