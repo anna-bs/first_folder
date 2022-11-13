@@ -44,6 +44,33 @@ time.innerHTML = `${currentHour}:${currentMin}`;
 day.innerHTML = `${currentDay}`;
 date.innerHTML = `${currentDate} ${currentMonth} ${currentYear}`;
 
+function displayForecast() {
+  let forecastElemet = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2 mx-auto">
+        <div class="weather-forecast-date">${day}</div>
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="48"
+        />
+        <div class="weather-forecast-temperature">
+          <span class="day-temperature">27°</span>
+          <span class="night-temptemperature text-muted">21°</span>
+        </div>
+      </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElemet.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 function displayTemperature(response) {
   console.log(response.data);
   let cityElement = document.querySelector("#selected-city");
@@ -98,6 +125,7 @@ let form = document.querySelector("#city-form");
 form.addEventListener("submit", handleSubmit);
 
 search("Berlin");
+displayForecast();
 
 let celsiusTemperature = null;
 
