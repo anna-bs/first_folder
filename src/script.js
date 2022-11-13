@@ -66,6 +66,7 @@ function displayForecast() {
       </div>
   `;
   });
+
   forecastHTML = forecastHTML + `</div>`;
   forecastElemet.innerHTML = forecastHTML;
   console.log(forecastHTML);
